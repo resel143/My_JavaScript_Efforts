@@ -1,0 +1,61 @@
+/* Only these datatypes contains values
+Objects,
+strings,
+numbers,
+function,
+boolean
+
+with 6 types of objects:
+Object, Date, Array, String, Number, Boolean
+
+Data type that cannot contain values:
+null,
+undefined
+*/
+
+let varType;
+varType = 20;
+console.log(varType);
+console.log(typeof varType);
+
+console.log(varType.length);
+
+//convert number to string
+
+// String()
+
+varType = String(25);
+console.log(varType);
+console.log(varType.length);
+
+//Array to String
+
+let vararr = [1,2,3,4,5,6];
+console.log(vararr);
+vararr = String([1,2,3,4,5,6,9,8,7]);
+console.log(typeof vararr);
+
+// toString
+
+
+varType = (7).toString();
+console.log(typeof varType);
+
+varType = parseFloat('102.58');
+
+console.log(varType.toFixed(5));
+
+// converting booleans to String
+
+varType = Boolean('true');
+console.log(varType);
+
+
+// convert bool to Number
+
+let varBoo = true;
+varBoo = Number(true);
+console.log(varBoo)
+
+
+

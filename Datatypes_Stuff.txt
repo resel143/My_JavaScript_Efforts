@@ -1,0 +1,46 @@
+// Datatypes
+
+// Primitive Datatypes
+/*
+Boolean, Null, Undefined, Number, String, Symbols(Unique value)
+*/
+
+// String
+const name = 'ReSel';
+
+console.log(name);
+
+// Number
+const age = 45;
+console.log(age);
+
+// Boolean
+const isStudent = true;
+console.log(isStudent);
+
+// null
+const knowledge = null;
+console.log(typeof knowledge);
+
+// Symbol
+
+const sym = Symbol();
+console.log(typeof sym);
+
+
+// Reference Datatypes
+
+// Array
+
+const Owner = ['Reshul', 'Selena', 'Apurva'];
+console.log(typeof Owner);
+
+// Object
+
+const company = {
+    city: "NYC",
+    State: 'NYC',
+    Country: 'USA'
+};
+
+console.log(typeof company);
