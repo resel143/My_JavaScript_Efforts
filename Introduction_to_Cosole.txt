@@ -1,0 +1,28 @@
+/*
+index.html
+Pretty much here is mine introduction to Console programming
+*/
+<html>
+    <head>
+        Reshul's Javascript Serious Tutorials
+    </head>
+    <body>
+        <script>
+            // alert('Hello User Reshul! Let us not Stop and Continue!')
+            // console.log('What the fuk are you doing!');  
+            // console.log('13245');
+            // console.log([1,2,3,4,5]);
+            // var num = [1,2,3,4,5,6,5,4,5];
+            // console.log(num);
+            var str = 'Reshul Boss is now learning seriously!';
+            console.log(str);
+            console.table({a:1, b:2, c:3, d:4});
+            console.warn('This is Reshul Alerting User!');
+            console.error('This Repository is hacked by Reshul');
+            console.info('This is Reshul information');
+            console.debug('Buuggggugggs');
+            console.clear()
+        
+        </script>
+    </body>
+</html>
