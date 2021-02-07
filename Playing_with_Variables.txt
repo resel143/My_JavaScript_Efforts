@@ -1,0 +1,58 @@
+// var - global scope - hoisted to top of the scope but initialized to undefined
+
+var name = 'reshul';
+
+name = 'Selena';
+console.log(name);
+// let 
+// const
+
+// naming variables
+/*
+1. No starting with numbers!
+2. May start with _ or $
+3. Can obyo work with camelCase
+No longer used var Nowadays: because its values can be reassigned so ES6 came up with let and const
+*/
+
+var $name = 'dollar';
+console.log($name);
+
+var _name = 'underscore';
+console.log(_name);
+
+// let and const
+
+// let since ES6 and has block level scope
+
+let naam = 'ReSel'
+
+console.log(naam);
+
+// = means assigning value
+// == means equals to value
+// === means values and type
+
+// let greet = 'Hi!!';
+ let greet = 'Hello Instead';
+
+let number = 5;
+if(number>4){
+    let hello = 'Reshul Wate is Rockstar';
+    console.log(greet);
+}
+
+// const - cannot be updated or redeclared
+
+const naamkaran = 'ReshuL'
+
+let numbers = 6;
+
+if(numbers >5){
+    // naamkaran = 'Selena';
+    // console.log(naamkaran);
+}
+console.log(naamkaran);
+
+
+// const - variables are declared but not initialized to anything giving out as error
