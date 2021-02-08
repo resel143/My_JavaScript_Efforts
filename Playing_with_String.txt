@@ -1,0 +1,85 @@
+const firstname = 'Reshul';
+const lastname = 'Wate';
+
+let name;
+name = firstname+' '+lastname;
+
+console.log(name);
+
+// string concat
+
+name = firstname.concat(' ',lastname);
+console.log(name);
+
+// string append
+
+name = 'Reshul';
+name += 'Selena';
+
+console.log(name);
+
+const year = 2014;
+
+name = 'Hello! My name is'+ ' ' + firstname + ' '+ ' ' + 'and I love Selena' + ' ' + 'from year' + year;
+
+console.log(name);
+
+// properties and method of String
+
+// length
+console.log(firstname.length);
+console.log(lastname.length);
+
+// change cases 
+
+// toLowercase
+name = firstname.toLowerCase();
+console.log(name);
+
+// touppercase
+name = firstname.toUpperCase();
+console.log(name);
+
+//individual spellings
+
+name = firstname[0];
+console.log(name);
+name = firstname[1];
+console.log(name);
+name = firstname[2];
+console.log(name);
+name = firstname[3];
+console.log(name);
+name = firstname[4];
+console.log(name);
+name = firstname[5];
+console.log(name);
+
+
+
+// index of 
+name = firstname.indexOf('h')
+console.log(name);
+
+// charAt - returns the character at that positio
+name = firstname.charAt(5);
+console.log(name);
+
+// substring
+
+name = firstname.substring(2,4);
+console.log(name);
+
+// split - based on argument provided splits the String
+let str = 'Hello mine name is Reshul';
+name = str.split("str");
+console.log(name);
+
+// replace - replaces the word or character with another defined
+
+name = str.replace('Hello', 'Dirty Fellow');
+console.log(name);
+
+// include method - returns boolean if present in String
+
+console.log(str.includes('selena'));

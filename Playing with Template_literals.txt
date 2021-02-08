@@ -1,0 +1,20 @@
+// multiline string and string interpolation functions comes under tempelateliterals 
+// it can directly be shown at html document
+
+const owner01name = 'Reshul';
+const owner02name = 'Selena';
+const owner03name = 'Apurva';
+const company = 'ReSel';
+const year = 2025;
+const website = 'https://resel.com';
+
+
+html = 
+`The company named ${company} is founded by ${owner01name} and has 
+co-owners ${owner02name} and ${owner03name}. Began in the year ${year} has
+online specification @ ${website}`
+;
+
+
+
+document.body.innerHTML= html;
