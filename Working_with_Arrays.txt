@@ -1,0 +1,87 @@
+let age = [12,15,14,18,22,52,43,62];
+
+console.log(age);
+
+// making arrays with Object
+
+let iceage = new Array(15,46,58,78,95,41,25,34,67,15);
+
+console.log(iceage);
+
+// array of strings 
+let names = new Array('Reshul','Selena','Apurva','Kavita');
+
+console.log(names);
+
+// arrays can be mixed in JS
+
+let mixArr = new Array('Reshul', 20, null, true, 5+6, 'ReSel');
+console.log(mixArr);
+
+// isArray function
+array = Array.isArray(iceage)
+console.log(array);
+
+// insert and replace 
+
+let nayaraipur = new Array(12,13,14,15,16,17,18);
+console.log(nayaraipur);
+
+nayaraipur[0]=50;
+console.log(nayaraipur);
+
+// index of 
+console.log(mixArr.indexOf(true));
+
+// mutating arrays
+
+// push 
+mixArr.push('SelG');
+console.log(mixArr);
+
+// pop 
+mixArr.pop();
+console.log(mixArr);
+
+// unshift - add in the beginning
+mixArr.unshift('SelenaG');
+console.log(mixArr);
+
+// shift - remove from 0th position 
+mixArr.shift();
+console.log(mixArr);
+
+// reversing arrays
+
+console.log(mixArr);
+
+console.log(mixArr.reverse());
+
+// concatenation of 2 arrays
+
+mixArr= mixArr.concat(names);
+console.log(mixArr);
+
+// sorting arrays - sort() - does not sort in increasing order by value but by first place
+
+console.log(mixArr.sort());
+
+//implemeting function in arrays
+
+console.log(iceage);
+console.log(age);
+
+console.log(iceage.sort(function(x,y){
+    return y - x ;
+}));
+
+
+// find method 
+
+let kgk = new Array(569,25,148,1675,1698,2,45,33,59745,254,1);
+
+function leth100(x){
+    return x > 100;
+}
+arr2 = kgk.find(leth100);
+console.log(arr2);
