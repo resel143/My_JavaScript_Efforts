@@ -1,0 +1,67 @@
+// The math Object
+
+const num_1 = 100;
+const num_2 = 50;
+
+let calc;
+
+// multiplication
+calc = num_1 * num_2;
+console.log(calc);
+// division
+calc = num_1/num_2;
+console.log(calc);
+// addition
+calc = num_2+num_1;
+console.log(calc);
+// substration
+calc = num_1-num_2;
+console.log(calc);
+// modulus
+calc = num_1%num_2;
+console.log(calc);
+
+
+// math Object
+
+calc = Math.E;
+console.log(calc)
+
+// math round
+
+calc = Math.round(4.54);
+console.log(calc);
+
+// math ceil
+calc = Math.ceil(4.3);
+console.log(calc);
+
+// math floor
+
+calc = Math.floor(4.9);
+console.log(calc);
+
+// math sqrt 
+calc = Math.sqrt(9);
+console.log(calc);
+
+// math power
+calc = Math.pow(2,3);
+console.log(calc);
+
+// math abs gives modulus of value in it
+calc = Math.abs(-5.6);
+console.log(calc);
+
+// math min - gives minimum value present in sequence
+calc = Math.min(2,5,6,-10,-5,-100,100);
+console.log(calc);
+
+// math max 
+
+calc = Math.max(-1, -2,-5,-9,-8,-4,0);
+console.log(calc);
+
+// math random - gives random number [0,1]
+calc = Math.floor(Math.random()*15 + 1);
+console.log(calc);
