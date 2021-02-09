@@ -1,0 +1,61 @@
+// using object literals
+const variable = {
+    name:'Reshul',
+    lastname: 'W',
+    age: 20,
+    Profession:'Businessman',
+    birthday:['March',30,2000],
+    address:{
+        city: 'Raipur',
+        state:'Chattisgarh',
+        pin: 492001,
+        colony: 'Rajeev Nagar',
+    },
+    getBirthYear: function(){
+        return 2000;
+    }
+};
+
+let obj;
+
+obj = variable;
+
+console.log(obj);
+
+// second most used way 
+
+console.log(obj.name);
+
+// another way 
+console.log(obj['name']);
+
+console.log(obj.address);
+
+console.log(obj.address.colony);
+
+console.log(obj.getBirthYear());
+
+// arrays of object 
+
+const family = [
+    {
+        name:'Reshul',age:20
+    },
+    {
+        name:'Mumma', age:35
+    },
+    {
+        name:'Apurva', age:15
+    },
+    {
+        name:'SelG',age:25
+    }
+];
+
+console.log(family[3]);
+
+// printing whole array 
+
+for(let i=0;i< family.length;i++){
+    console.log(family[i].name);
+}
