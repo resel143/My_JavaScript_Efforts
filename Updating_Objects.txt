@@ -1,0 +1,37 @@
+// adding and updating properties of object 
+
+const family = {};
+
+console.log(family);
+
+
+// add using []
+
+family['Joker'] = 'Reshul';
+
+family['Queen'] = 'Selena';
+
+family['Princess']= 'Apurva';
+
+// add using .
+
+family.Joker = 'Mama';
+
+family.king = 'Reshul';
+
+// migrating surname 
+
+family.king += ' de W';
+
+// adding object to existing object 
+
+family['info'] = {age: 'male', sex: 45};
+
+family.info.sex++;
+
+// adding array to object 
+
+family['sweethears']= ['Ana','Una','Vez'];
+
+
+family.sweethears.push('Dwyane')
