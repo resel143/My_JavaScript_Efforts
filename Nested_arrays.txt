@@ -1,0 +1,70 @@
+// Nested arrays and objects 
+
+const user ={
+    firstName: 'Reshul',
+    age:20,
+    lastName: 'de W',
+    attributes: ['Developer','Businessman','Intellectual'],
+    expirence : {
+        company01 : 3,
+        company02 : 5,
+        company03: 8,
+    },
+    salary: {
+        juniorDev : 1500,
+        seniorDev : 2000,
+        teamLeader: 5000
+    }
+};
+
+console.log(user);
+
+// total expirence 
+
+console.log(user.expirence.company01 + user.expirence.company02+user.expirence.company03+ ' years of expirence!' );
+
+//total earnings
+console.log(user.salary.juniorDev + user.salary.teamLeader+ user.salary.seniorDev + ' total earnings till date');
+
+
+// toFixed method - gives out the desired number of digits
+avgSalary = (user.salary.juniorDev + user.salary.teamLeader+ user.salary.seniorDev)/3;
+console.log(avgSalary.toFixed());
+
+// Array [ objects];
+
+const users = [
+    (user01={
+        name: 'Reshul',
+        pos : 'SnrDeveloper',
+        age: 20,
+    }),
+    (user01={
+        name: 'Apurva',
+        pos : 'SnrDeveloper',
+        age: 17,
+    }),
+    (user03={
+        name: 'Selena',
+        pos : 'teamLeader',
+        age: 25,
+    })
+];
+
+console.log(users);
+
+// get info of Apurva 
+
+console.log(users[1].name + " " + users[0].name );
+
+// making list of user names from existing users 
+
+let listofUserNames = new Array(users[0].name, users[1].name);
+
+console.log(listofUserNames);
+
+// finding average age of users 
+
+avgAge = (users[0].age + users[1].age + users[2].age)/users.length;
+
+console.log(avgAge.toFixed());
