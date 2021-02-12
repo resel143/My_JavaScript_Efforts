@@ -1,0 +1,31 @@
+// logical operators 
+
+let name = 'Reshul';
+
+let age = 56;
+
+// logical and && 
+
+if(age >0 && age <40){
+    console.log(`you are eligible! ${name}`);
+}else{
+    console.log(`fatty acid!! ${name}`);
+}
+
+// logical OR || 
+
+if(age >0 || age <40){
+    console.log(`you are eligible! ${name}`);
+}else{
+    console.log(`fatty acid!! ${name}`);
+}
+
+// logical NOT 
+age = 19;
+if(age=== 19){
+    console.log('Right age to work!');
+}
+else{
+    console.log('You are old!!');
+}
+
