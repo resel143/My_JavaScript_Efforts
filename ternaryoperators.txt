@@ -1,0 +1,14 @@
+// ternary operators 
+
+let number = 300;
+
+function getFee(isMember){
+    return isMember ? '$2.00' : '$10.00';
+}
+console.log(getFee(0));
+
+let age =19;
+
+const canDrive = age>18?'Yes':'NO';
+console.log(canDrive);
+// switch 
