@@ -1,0 +1,15 @@
+// if else if statement 
+
+let car = 'Tesla';
+car = 'BMW';
+car ='Audi';
+car = 'Bentley'
+if(car === 'Tesla'){
+    console.log(`The Car is ${car}`);
+}else if(car ==='BMW'){
+    console.log(`The car is not Tesla but is ${car}`);
+}else if(car === 'Audi'){
+    console.log(`You are having ${car}`);
+}else{
+    console.log('Idiot with Bicycle!!');
+}
