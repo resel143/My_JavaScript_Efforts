@@ -1,0 +1,68 @@
+let name = 'Selena';
+console.log(name);
+
+// functions playing 
+
+function myfirstfunc(){
+    return 'this is my functions';
+}
+
+console.log(myfirstfunc());
+
+function wtf(color){
+    if(color === 'red'){
+        return 'Danger Ahead!';
+    }
+    else if(color === 'green'){
+        return 'Go Green!';
+    }
+    else{
+        return 'Beware Not specified!';
+    }
+}
+
+console.log(wtf('red'));
+
+// function parameters or arguments 
+
+function whatisyou(name){
+    return `I am ${name}`;
+}
+
+console.log(whatisyou('Reshul'));
+
+// multiple parameters 
+
+function oner(ow01,ow02,ow03){
+    return `Owners of this company are ${ow01}, ${ow02} and ${ow03}`;
+}
+
+console.log(oner('Reshul','Selena','Apurva'));
+
+const sum = function(x){
+    return x+x;
+}
+console.log(sum(50));
+
+// IIFEs - these functions are automatically called where ever declared!
+
+(function (name){
+    console.log('Hello '+ `${name}`);
+})('Reshul');
+
+const users = {
+    add: function(){
+        console.log('User was added');
+    },
+    edit: function(id){
+        console.log(`Edit user ${id}`);
+    },
+}
+
+users.delete =function () {
+    console.log('User was Deleted!');
+}
+
+users.add();
+users.edit(5);
+users.delete();
