@@ -1,0 +1,59 @@
+let name = 'Reshul';
+
+console.log(name);
+
+let mbn;
+
+const today = new Date();
+
+mbn = today;
+
+console.log(mbn);
+
+// let us see your birthday
+
+let bday = new Date("09-01-2007 10:15:15");
+
+bday = new Date('March 30 2000');
+console.log(bday);
+
+// playing with dates 
+
+mbn = today.getMonth();
+mbn = today.getDate();
+mbn = today.getDay();
+mbn = today.getFullYear();
+console.log(mbn);
+
+// set date method - manipulate the month, year by us!
+
+bday.setMonth(5);
+bday.setDate(25);
+bday.setFullYear(2500);
+bday.setHours(15);
+bday.setMinutes(26);
+bday.setSeconds(6);
+console.log(bday);
+
+// an Example 
+
+let someDay, toDay, text;
+
+someDay = new Date();
+
+toDay = new Date();
+
+someDay.setFullYear(2018,0,14);
+
+console.log(someDay);
+
+function theDate(){
+    if(someDay> toDay){
+        text = 'Today is before 2022';
+    }
+    else{
+        text = 'Today is After 2022';
+    }
+}
+theDate();
+console.log(text);
