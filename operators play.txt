@@ -1,0 +1,92 @@
+var name = 'Selena';
+
+console.log(name);
+
+let stmt = 500;
+// equality == 
+
+if(stmt == 500){
+    console.log("correct");
+}
+else{
+    console.log("Incorrect!");
+}
+
+// inequality != 
+
+if(stmt != 510){
+    console.log("correct!");;
+}
+else{
+    console.log("incorrect!");
+}
+
+// identity strict equality === 
+
+// mostly used this 
+
+// here the value and type should be same 
+
+if(stmt === '500'){
+    console.log("correct!");;
+}
+else{
+    console.log("incorrect!");
+}
+
+// non identity strict inequality 
+
+if(stmt !== '500'){
+    console.log("correct!");;
+}
+else{
+    console.log("incorrect!");
+}
+
+// mostly non identity is used for inequality 
+
+let existence = 'ReSel';
+
+console.log(typeof existence);
+
+if(existence !== 'undefined'){
+    console.log(`This statement is ${existence} and it exists!`);
+}else{
+    console.log('Statement missing!!');
+}
+
+// greater than >
+
+if(stmt > 100){
+    console.log("correct");
+}
+else{
+    console.log("Incorrect!");
+}
+
+// less than <
+
+if(stmt < 100){
+    console.log("correct");
+}
+else{
+    console.log("Incorrect!");
+}
+
+// greater than equals to >= 
+
+if(stmt >= 100){
+    console.log("correct");
+}
+else{
+    console.log("Incorrect!");
+}
+
+// less than equals to <= 
+
+if(stmt <= 8000){
+    console.log("correct");
+}
+else{
+    console.log("Incorrect!");
+}
