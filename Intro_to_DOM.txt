@@ -1,0 +1,25 @@
+// DOM - document object model 
+var name = 'Selena';
+console.log(name);
+
+let x = document;
+console.log(x);
+
+x = document.all;
+console.log(x);
+
+x = document.all[0];
+console.log(x);
+
+x = document.all[1];
+console.log(x);
+
+x = document.all.length;
+console.log(x);
+
+x = document.body;
+
+console.log(x);
+
+x = document.head;
+console.log(x);
