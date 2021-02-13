@@ -1,0 +1,20 @@
+// Map - returns array of results being called mostly used in arrays of objects
+
+const users =[
+    {id:1, name: 'Reshul'},
+    {id:2, name: 'Selena'},
+    {id:3, name: 'Mumma'},
+    {id:4, name: 'Apurva'},
+];
+
+const isd = users.map(function(user){
+    return user.name;
+});
+
+console.log(isd);
+
+// map using arrow function 
+
+const muaf = users.map((user)=> user.id);
+
+console.log(muaf);
