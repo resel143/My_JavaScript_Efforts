@@ -1,0 +1,46 @@
+let name = 'Selena';
+console.log(name);
+
+// single element selection 
+
+// 5 ways in total - methods 
+
+// select element by id 
+
+// document.getElementById 
+console.log(document.getElementById('kgk'));
+console.log(document.getElementById('kgk').id);
+// console.log(document.getElementById('kgk').cla);
+
+// now change it  bloddy 
+
+document.getElementById('kgk').style.backgroundColor = 'red';
+// document.getElementById('kgk').style.textAlign = 'center';
+document.getElementById('kgk').style.color = 'white';
+
+// varying content inside html 
+
+// document.getElementById('kgk').textContent = 'ReSel Billionaires';
+// another method to vary content 
+// document.getElementById('kgk').innerText = 'ReSel Billionaires';
+// this time insert in html 
+document.getElementById('kgk').innerHTML = 'Reshul <ul><li>Reshul</li><li>Selena</li><li>Apurva</li></ul>'
+
+
+
+// select using Queryselector - #id_name, .class_name - selects not all but very first element occuring in document 
+
+let signla = document.querySelector('#kgk');
+console.log(signla);
+
+signla.style.backgroundColor= 'Green';
+
+let jk = document.querySelector('.apu');
+console.log(jk);
+
+jk.style.backgroundColor = 'orange';
+jk.innerHTML = 'Apurva ka Ghar';
+
+sigla = document.querySelector('li');
+console.log(signla);
+
