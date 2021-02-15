@@ -1,0 +1,61 @@
+// getting element by class names 
+
+const items = document.getElementsByClassName('apu');
+console.log(items[0]);
+
+items[1].style.color = 'red';
+items[1].style.backgroundColor = 'orange'
+items[0].textContent = 'ReSel';
+
+const listItems = document.querySelector('.apu');
+console.log(listItems);
+
+// getelement by tagname 
+
+const tagElements = document.getElementsByTagName('p');
+console.log(tagElements);
+
+tagElements[0].style.backgroundColor = 'yellow';
+tagElements[2].style.color = 'red';
+tagElements[3].style.fontSize = '3rem';
+
+
+// querySelectorAll returns static list of specific group
+
+const allItems = document.querySelectorAll("ul.ownerItems li.ownerItems");
+
+console.log(allItems);
+
+allItems.forEach(function(i){
+    console.log(i.className);
+    i.innerHTML = 'ReSel';
+    i.innerText = 'Reshulwa';
+});
+
+// selecting odd and even elements of list 
+
+const listItemsOdd = document.querySelectorAll('li:nth-child(odd)');
+console.log(listItemsOdd);
+
+listItemsOdd.forEach(function(li){
+    li.style.backgroundColor = 'orange';
+});
+
+// changing using simple for 
+
+for(let i=0;i<listItemsOdd.length;i++){
+    listItemsOdd[i].style.fontSize = '1.5rem';
+}
+
+// doing with even 
+
+const listItemsEven = document.querySelectorAll('li:nth-child(even)');
+console.log(listItemsEven);
+
+listItemsEven.forEach(function(i){
+    i.style.backgroundColor='lightblue';
+});
+
+for (let index = 0; index < listItemsEven.length; index++) {
+    listItemsEven[index].style.backgroundColor ='blue';
+}
