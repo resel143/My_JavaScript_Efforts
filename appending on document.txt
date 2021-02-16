@@ -1,0 +1,34 @@
+let name = 'Reshul';
+console.log(name);
+
+// create new element and add it to DOM 
+
+const li = document.createElement('li');
+
+// adding class to new element 
+
+li.className = 'ownerItems';
+
+// adding id to element 
+li.id = 'New_id';
+
+// add attribute to element 
+li.setAttribute('title','NewWorld');
+
+// create text Node and append to new element 
+
+li.appendChild(document.createTextNode('Kar Gaye Kaand'));
+
+// append li as child to ul 
+
+let append = document.querySelector('ul.ownerItems').appendChild(li);
+// console.log(append);
+
+// create checkbox 
+
+const checkbox = document.createElement('input');
+checkbox.setAttribute('type','checkbox');
+checkbox.id = 'check';
+console.log(checkbox);
+li.appendChild(checkbox);
+console.log(li);
