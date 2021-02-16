@@ -1,0 +1,63 @@
+let name = 'Reshul';
+console.log(name);
+
+let move;
+const list = document.querySelector('ul.countryItems');
+console.log(list);
+
+const listItems = document.querySelector('li.countryItems');
+console.log(listItems);
+
+// Get child Node 
+
+move = list.childNodes;
+console.log(move);
+move = list.childNodes[0].nodeType;
+move = list.childNodes[1].nodeType;
+// The output of the above 2 lines are numbers based on :
+// 1 - Element
+// 2 - Attribute
+// 3 - Text Node
+// 8 - Comment
+// 9 - DocumentType
+// 10 - Doctype 
+
+
+// get childrens 
+move = list.children;
+move = list.children[1].textContent = 'SelG';
+move = list.children[0].innerHTML = `getElementById()<input
+type="checkbox"/>`;
+console.log(move);
+
+
+move = list.children[0].children[0].id = 'Check';
+console.log(move);
+
+move = list.firstChild;
+move = list.firstElementChild;
+move = list.lastChild;
+move = list.lastElementChild.innerHTML = 'SelRe';
+
+move = listItems.parentNode;
+move = listItems.parentElement;
+move = listItems.parentElement.parentElement;
+console.log(move);
+
+console.log('Next Sibling');
+move = listItems.nextSibling;
+console.log(move);
+
+console.log('Next Element Sibling');
+move = listItems.nextElementSibling;
+console.log(move);
+
+// get prev sibling 
+
+move = listItems.previousSibling;
+console.log('previous sib');
+console.log(move);
+
+move = listItems.previousElementSibling;
+console.log('previous element sibling');
+console.log(move);
