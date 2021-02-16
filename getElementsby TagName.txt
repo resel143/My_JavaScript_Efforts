@@ -1,0 +1,20 @@
+// getting elements by tagname 
+
+const tagElement = document.getElementsByTagName('li');
+console.log(tagElement);
+console.log(tagElement[0]);
+
+tagElement[0].style.backgroundColor = 'red';
+tagElement[2].style.fontSize = '5rem';
+
+let tagElementUl = document.getElementsByTagName('ul');
+console.log(tagElementUl);
+
+tagElementUl = Array.from(tagElementUl);
+tagElementUl.reverse();
+
+tagElementUl.forEach(function(ul){
+    console.log(ul.className);
+    ul.innerHTML = 'Reshul';
+    ul.style.color = 'red';
+});
