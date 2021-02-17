@@ -1,0 +1,79 @@
+// replacing elemets 
+
+// create first element 
+
+const container = document.createElement('div');
+
+// giv id 
+
+container.id = 'Container';
+console.log(container);
+
+// create title element 
+
+const new_h_el = document.createElement('h3');
+new_h_el.className = 'new-h3-element';
+new_h_el.appendChild(document.createTextNode('Kar Gaye Kaand'));
+// console.log(new_h_el);
+
+//create paragraph element
+
+const new_p_ele = document.createElement('p');
+new_p_ele.className = 'new_p_ele';
+new_p_ele.appendChild(document.createTextNode('New Dom paragraph element'));
+
+container.appendChild(new_h_el);
+container.appendChild(new_p_ele);
+console.log(container);
+
+// now making it visible 
+
+document.body.appendChild(container);
+
+container.style.backgroundColor = 'red';
+container.style.color = 'white';
+
+// get parent element 
+const parent = document.getElementById('Container');
+console.log('parent');
+console.log(parent.lastChild);
+
+const oldEle = parent.firstChild;
+console.log('oldelement');
+console.log(oldEle);
+
+let replacedTitle = document.createElement('h3');
+replacedTitle.className = 'replaced-Title';
+
+replacedTitle.appendChild(document.createTextNode('Replaced Element'));
+console.log(replacedTitle);
+
+// replace old element with new one 
+
+parent.replaceChild(replacedTitle,oldEle);
+
+replacedTitle.style.color = 'yellow';
+
+
+// remove element 
+
+// replacedTitle.remove();
+
+// removing all list elements 
+
+const listElements = document.querySelectorAll('li');
+console.log('list elements');
+console.log(listElements);
+
+const lists = document.querySelectorAll('ul');
+console.log('ul lists');
+console.log(lists);
+
+// remove elements 
+
+// listElements[2].remove();
+
+// removing childrens of elements 
+
+console.log(lists[0].children);
+lists[0].removeChild(listElements[2]);
