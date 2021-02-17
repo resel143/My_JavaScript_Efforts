@@ -1,0 +1,70 @@
+let name = 'Reshul';
+console.log(name);
+
+const firstLi = document.querySelector('li:first-child');
+console.log(firstLi);
+
+const lastLi = document.querySelector('li:last-child');
+console.log(lastLi);
+
+const nthUl = document.querySelector('ul');
+console.log(nthUl);
+
+// create new element 
+
+const liElement = document.querySelector('li:first-child');
+console.log(liElement);
+
+let childElement = document.createElement('a');
+childElement.className = 'new-child';
+childElement.appendChild(document.createTextNode('link'));
+console.log(childElement);
+childElement.style.textDecoration='underline';
+childElement.style.color='grey';
+childElement.style.cursor = 'pointer';
+
+liElement.appendChild(childElement);
+// console.log(liElement);
+console.log(liElement.children[0]);
+
+const newChildElement = liElement.children[0];
+// console.log(newChildElement);
+
+let newChild;
+
+newChild = newChildElement;
+console.log('newChild');
+console.log(newChild);
+
+// classes 
+
+newChild = newChildElement.className;
+console.log(newChild);
+
+newChild = newChildElement.classList;
+console.log('ClassList');
+// console.log(newChild);
+
+newChildElement.classList.add('second-class');
+newChild = newChildElement.classList[1];
+console.log(newChild);
+
+// attributes 
+
+let att;
+att = newChildElement.setAttribute('href','https://google.com');
+
+// opening at new page 
+
+att = newChildElement.setAttribute('target','_blank');
+
+att = newChildElement.getAttribute('target');
+
+att = newChildElement.getAttribute('href');
+att = newChildElement.hasAttribute('class');
+
+
+newChildElement.removeAttribute('target');
+
+att = newChildElement.hasAttribute('target');
+console.log(att);
