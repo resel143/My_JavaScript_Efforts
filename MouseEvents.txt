@@ -1,0 +1,51 @@
+// mouse events 
+
+const title = document.querySelector('h1');
+
+const check = document.querySelector('#CheckBox_01');
+
+const inputEmail = document.querySelector('#inputemail');
+
+const submitBtn = document.querySelector('.btn');
+
+console.log(submitBtn);
+
+// event handler function 
+
+function runEvent(e){
+    console.log(`Event Type: ${e.type}`);
+    let dosomething = document.querySelector('h1');
+    dosomething.style.color = 'red';
+}
+
+// click 
+check.addEventListener('click',runEvent);
+
+// double click 
+
+check.addEventListener('dblclick',runEvent);
+
+// mouse down 
+// inputEmail.addEventListener('mousedown',runEvent);
+
+
+// mouse up
+// inputEmail.addEventListener('mouseup',runEvent);
+
+// Mouse enter 
+// inputEmail.addEventListener('mouseenter',runEvent);
+
+
+// Mouse over 
+// inputEmail.addEventListener('mouseover',runEvent);
+
+// Mouse out
+// inputEmail.addEventListener('mouseout',runEvent);
+
+// Mousemove
+inputEmail.addEventListener('mousemove',flowMouse);
+
+function flowMouse(e){
+    title.textContent = 'Mouse Entered Wrong Zone!';
+    // console.log(`Mouse_X: ${e.offsetX}, Mouse_Y: ${e.offsetY}`);
+}
