@@ -1,0 +1,9 @@
+let name = 'REshul';
+console.log(name);
+
+
+// access button 
+document.querySelector('.btn').addEventListener('click',function(){
+    console.log('I have been clicked!');
+});
+// console.log(btn);
