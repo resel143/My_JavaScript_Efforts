@@ -1,0 +1,44 @@
+let name = 'selena';
+console.log(name);
+
+//keyboard events - keys pressed
+
+// keydown 
+
+const event = document.querySelector('.city');
+// console.log(event);
+
+
+event.addEventListener('keydown',logkey);
+
+function logkey(e){
+    // console.log(e);
+    console.log(`Key Pressed: ${e.code}`);
+}
+
+let someForm= document.querySelector('.form');
+
+let inputEmail = document.querySelector('#inputemail');
+let inputPassword = document.querySelector('#pass');
+// console.log(inputPassword);
+
+someForm.addEventListener('submit',dosomething);
+
+// keyup 
+
+// inputEmail.addEventListener('keyup',dosomething);
+
+// copy 
+// inputEmail.addEventListener('copy',dosomething);
+
+document.querySelector('#CheckBox').addEventListener('change',dosomething);
+
+function dosomething(e){
+    console.log(`Event Type =${e.type}`);
+    e.preventDefault();
+    // get input value to show in console 
+    console.log(inputPassword.value);
+    console.log(inputEmail.value);
+    inputPassword.value = '';
+    inputEmail.value = '';
+}
