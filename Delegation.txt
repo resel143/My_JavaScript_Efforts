@@ -1,0 +1,21 @@
+// Event delegation 
+
+const checkItem = document.querySelectorAll('.item');
+// console.log(checkItems);
+
+// checkItems.addEventListener('click',function(){
+//     console.log('Selena');
+// });
+
+
+const checkItems = document.querySelector('.check-all');
+// console.log(checkItems);
+
+
+checkItems.addEventListener('click',checkAllItems);
+
+function checkAllItems(e){
+    // console.log(e.target.parentElement);
+    e.target.parentElement.remove();
+    if(e.target.classList)
+}
