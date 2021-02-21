@@ -1,0 +1,16 @@
+const parent = document.querySelector('#inputemail');
+
+// event bubbling 
+
+parent.addEventListener('click',function (){
+    console.log('Reshul');
+});
+
+document.querySelector('#pass').addEventListener('click',function (){
+    console.log('Selena');
+});
+
+document.querySelector('.form').addEventListener('click',function (){
+    console.log(`Apurva`);
+})
+
