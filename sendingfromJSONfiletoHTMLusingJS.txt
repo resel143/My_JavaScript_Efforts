@@ -1,0 +1,19 @@
+let xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function(){
+    if(this.readyState ==4 && this.status == 200){
+        const response = JSON.parse(xhttp.responseText);
+
+        const family = response.family;
+        let output = "";
+
+        for(let i=0;i<family.length;i++){
+            output+=`<li>${family[i].name}: ${family[i].age}</li>`
+        }
+
+        document.getElementById('family').innerHTML = output;
+    }
+  };
+
+  xhttp.open("GET","family.json",true);
+
+  xhttp.send();
