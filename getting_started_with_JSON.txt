@@ -1,0 +1,24 @@
+let user = {
+    name:'reshul',
+    age: 20,
+    address:{
+        street:'Shiv Mandir Road',
+        city: "The City"
+    },
+    family:['Selena',"Apurva"],
+};
+
+console.log(user.address);
+console.log(user.family[0]);
+console.log(typeof user.address);
+console.log(typeof user.family, user.age, user.family);
+
+JSON.stringify();
+
+// converting Javascript Object to JSON string format 
+user = JSON.stringify(user);
+console.log(user);
+
+// again converting to String 
+user =JSON.parse(user);
+console.log(user);
