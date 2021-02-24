@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--  Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <!-- Icons Link -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>LocalStorage and sessionStorage</title>
+  </head>
+
+  <body>
+    <ul>
+      <h1 style="text-align: center;">
+        Local Storage <br />
+        and <br />
+        Session Storage
+      </h1>
+      <li>
+        <h5>save key/value pairs in the browser</h5>
+      </li>
+    </ul>
+    <div id="addUser" class="row">
+      <div class="col s12 m6">
+        <div class="card blue-grey darken-1">
+          <div class="card-content white-text">
+            <span class="card-title">Create New User</span>
+            <div class="row">
+              <!-- User Input  -->
+              <form id="userInput">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="user_name" type="text" class="validate" />
+                  </div>
+                </div>
+
+                <button
+                  class="btn waves-effect waves-light green"
+                  type="submit"
+                  name="action"
+                >
+                  Add User
+                  <i class="material-icons right">add</i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul>
+      <li>
+        <h4>LocalStorage/sessionStorage</h4>
+        <ul>
+          <li>setItem(key, value)</li>
+          <li>getItem(key)</li>
+          <li>removeItem(key)</li>
+          <li>clear()</li>
+          <li>key(index)</li>
+          <li>length</li>
+        </ul>
+      </li>
+      <li>
+        <h4>SessionStorage</h4>
+        <ul>
+          <li>less often used</li>
+          <li>same properties and methods</li>
+          <li>exists only within the current browser tab</li>
+        </ul>
+      </li>
+    </ul>
+    <script src="app.js"></script>
+  </body>
+</html>
