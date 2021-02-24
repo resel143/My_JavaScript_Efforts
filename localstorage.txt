@@ -1,0 +1,51 @@
+let name = 'Selena';
+console.log(name);
+
+// local and sesion properties 
+
+localStorage.setItem('User',1);
+
+// storing array of items /
+
+localStorage.setItem("Users",[1,2,3]);
+
+// alert(localStorage.getItem("Users"));
+
+// object like access 
+
+// set key 
+
+// localStorage.User = 2;
+// localStorage.Person = 'Selena';
+
+// display localstorage 
+
+// getkey 
+
+alert(localStorage.Person);
+
+// removekey 
+
+delete localStorage.Person;
+alert(localStorage.Person);
+
+// loop over key /
+// localStorage.setItem('Teacher','Selena');
+// localStorage.setItem('Cheater','Reshul');
+// localStorage.setItem('Chotu','Apurva');
+
+for(let i=0;i<localStorage.length;i++){
+    let key = localStorage.key(i);
+    alert(`${key}:${localStorage.getItem(key)}`);
+}
+
+// localStorage.user = {name: 'Relena'};
+
+localStorage.user =JSON.stringify({name:'Relena',age:25,profession:'Entertainer'});
+
+let user = JSON.parse(localStorage.user);
+
+// alert(localStorage.user);
+alert(user.name)
+alert(user.profession);
+alert(user.age);
