@@ -1,0 +1,28 @@
+// Eg Local and Session Storage
+
+document.getElementById('userInput').addEventListener('submit',function(e){
+    e.preventDefault();
+
+    const user = document.querySelector('#user_name').value;
+    // console.log(user);
+
+    // sessionStorage.setItem('user',user);
+    // alert('Stored to Session storage');
+
+    // localStorage.setItem('user',user);
+    // alert('Stored to Local Storage');
+
+    let users;
+
+    if(sessionStorage.getItem('users')===null || localStorage.getItem('users')===null){
+        users=[];
+    }else{
+        users = JSON.parse(sessionStorage.getItem('users')&&localStorage.getItem('users'));
+    }
+
+    users.push(user);
+    localStorage.setItem('users',JSON.stringify(users));
+    sessionStorage.setItem('users',JSON.stringify(users));
+    
+
+});
