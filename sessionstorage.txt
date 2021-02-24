@@ -1,0 +1,15 @@
+// session Storage - if refresh then gone - not much helpful
+
+
+sessionStorage.setItem('Test','First');
+sessionStorage.setItem('Test-2',[1,2,3]);
+
+// storing using json 
+
+sessionStorage.user_1 = JSON.stringify({name:'Relena', age:25, Profession: 'Entertainer'});
+alert(sessionStorage.getItem('Test'));
+
+// to return json object 
+
+let user1 = JSON.parse(sessionStorage.user_1);
+alert(user1.Profession);
