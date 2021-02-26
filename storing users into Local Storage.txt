@@ -1,0 +1,12 @@
+function storeUsersInLocalStorage(user){
+    let Users;
+    if(localStorage.getItem('Users')===null){
+        Users =[];
+    }else{
+        Users=JSON.parse(localStorage.getItem('Users'));
+    }
+
+    Users.push(user);
+
+    localStorage.setItem('Users', JSON.stringify(Users));
+}
