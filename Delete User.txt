@@ -1,0 +1,20 @@
+// delete user 
+
+function deleteUser(e){
+   if(e.target.parentElement.classList.contains('delete-user')){
+    //    console.log(e.target);
+    if(confirm('Delete User'))
+    e.target.parentElement.parentElement.remove();
+   }
+}
+
+// delete all users 
+
+function deleteAllUsers(){
+    if(confirm('Delete All Users?')){
+        while(userList.firstChild){
+            userList.removeChild(userList.firstChild);
+        }
+
+    }
+}
