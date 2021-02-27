@@ -1,0 +1,62 @@
+let anam = 'selena';
+console.log(anam);
+
+// create object 
+
+const person = {
+    firstName: 'Robert',
+    lastName: 'Downey',
+    id: '54558',
+    fullName: function() {
+        return this.firstName +" "+this.lastName;
+    },  
+    fullName: ()=> {
+        return this.firstName +" "+this.lastName;
+    },
+};
+
+console.log(person.fullName());
+
+const brick={
+    length: 40,
+    width:20,
+    height:10,
+    surface: function() {
+        return (this.length*this.width)/1000+' cm2';
+    }
+    // surface: function() {
+    //     return (length*width)/1000+' cm2';
+    // }
+};
+
+console.log(brick.surface());
+
+const x = this;
+console.log(x);
+
+const y ={
+    name:'Reshul',
+    // console.log(this),
+}
+console.log(this);
+
+function myFunc(){
+    return this;
+}
+console.log(myFunc());
+
+// arrow function 
+
+let user ={
+    firstName : 'Reshul',
+    lastName: 'Roby',
+    fullName: ()=>{
+        return this.firstName+" "+this.lastName;
+    }
+}
+
+console.log(user.fullName());
+
+const btn = document.querySelector('button').addEventListener('click',function() {
+    this.style.backgroundColor= 'red';
+})
