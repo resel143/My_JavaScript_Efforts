@@ -1,0 +1,11 @@
+function filterUser(e){
+    const text = e.target.value.toLowerCase();
+    document.querySelectorAll('.collection-item').forEach(function(user){
+        const item = user.children[1].textContent;
+        if(item.toLowerCase().indexOf(text)!=-1){
+            user.style.display = 'block';
+        }else{
+            user.style.display = 'none';
+        }
+    })
+}
