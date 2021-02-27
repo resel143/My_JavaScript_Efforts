@@ -1,0 +1,19 @@
+function removeUserLocalStorage(storedUser){
+    console.log(storedUser);
+    let Users;
+    if(localStorage.getItem('Users')===null){
+        Users=[];
+    }else{
+        Users=JSON.parse(localStorage.getItem('Users'));
+    }
+    Users.forEach(function(user,index) {
+        let fullName = user[0].firstName + " "+ user[0].lastName;
+        console.log(fullName);
+
+        if(storedUser.children[1].children[1].textContent===fullName){
+            Users.splice(index,1);
+        }
+    });
+
+    localStorage.setItem('Users',JSON.stringify(Users));
+}
