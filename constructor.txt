@@ -1,0 +1,99 @@
+let anam = 'selena';
+console.log(anam);
+
+// create object 
+
+const person = {
+    firstName: 'Robert',
+    lastName: 'Downey',
+    id: '54558',
+    fullName: function() {
+        return this.firstName +" "+this.lastName;
+    },  
+    fullName: ()=> {
+        return this.firstName +" "+this.lastName;
+    },
+};
+
+console.log(person.fullName());
+
+const brick={
+    length: 40,
+    width:20,
+    height:10,
+    surface: function() {
+        return (this.length*this.width)/1000+' cm2';
+    }
+    // surface: function() {
+    //     return (length*width)/1000+' cm2';
+    // }
+};
+
+console.log(brick.surface());
+
+const x = this;
+console.log(x);
+
+const y ={
+    name:'Reshul',
+    // console.log(this),
+}
+console.log(this);
+
+function myFunc(){
+    return this;
+}
+console.log(myFunc());
+
+// arrow function 
+
+let user ={
+    firstName : 'Reshul',
+    lastName: 'Roby',
+    fullName: ()=>{
+        return this.firstName+" "+this.lastName;
+    }
+}
+
+console.log(user.fullName());
+
+const btn = document.querySelector('button').addEventListener('click',function() {
+    this.style.backgroundColor= 'red';
+})
+
+const kalkabanda = {
+    name: 'Reshul',
+    age: 15,
+}
+console.log(kalkabanda);
+
+// adding new key value pair in the kalkabanda 
+
+kalkabanda.lastName = 'Robin';
+console.log(kalkabanda);
+
+// adding method to Object
+
+kalkabanda.fullName = `${kalkabanda.name} ${kalkabanda.lastName}`;
+console.log(kalkabanda);
+
+
+function teach(name, id, sub, start) {
+    this.id = id;
+    this.name = name;
+    this.sub = sub; 
+    this.start = new Date(start);//this is how you make key value pair using this keyword inside function
+//    console.log(`id: ${id}, name: ${name}, sub:${sub}`);
+    // console.log(name, id, sub);
+    this.workExp = function() {
+        const workExpToday = Date.now() - this.start.getTime();
+        const ageDate = new Date(workExpToday);
+        return(
+            'Work Experience:' + Math.abs(ageDate.getFullYear()-1970)+ " years"
+        )
+    };
+}
+// instantiating a function 
+
+const kalkamunda = new teach('Reshul',007,'Mathematics','03-30-2010');
+console.log(kalkamunda.workExp());
