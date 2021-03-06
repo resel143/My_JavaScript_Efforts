@@ -1,0 +1,7 @@
+const resel = Object.create(userPrototype,{
+    firstName:{value:"Reshul"},
+    lastName:{value:"Satan"},
+    degree:{value:"Kargayekaand"},
+});
+
+console.log(resel);
