@@ -1,0 +1,64 @@
+// prototype inheritance
+
+let name = 'Reshuul';
+console.log(name);
+
+function User(firstName, lastName){
+    (this.firstName = firstName),
+    (this.lastName= lastName);
+}
+
+
+// prototype method 
+
+User.prototype.greeting = function(){
+    return `hi ${this.firstName} ${this.lastName}`;
+}
+
+const user_1 = new User('Reshul','DeCruize');
+
+console.log(user_1.greeting());
+
+function Admin(firstName, lastName, email, access){
+    User.call(this, firstName, lastName);
+    this.email = email;
+    this.access = access;
+}
+Admin.prototype = Object.create(User.prototype);
+Admin.prototype.constructor = Admin;
+const user_02 = new Admin('Reshul','Selena','reshul@gmail.com','Owner');
+//we have 2 methods User and Admin assigning prototype of User ot Admin
+console.log(user_02.greeting());
+
+
+// create new object 
+
+const userPrototype = {
+    fullName:function(){
+        return `${this.firstName} ${this.lastName}`;
+    },
+
+
+// greeting: function(){
+//     return `Welcome ${this.fullName()}`;
+// },
+changeDegree: function(newDegree){
+    this.degree = newDegree;
+},
+greeting: function(){
+    return `Welcome ${this.degree} ${this.fullName()}`;
+},
+};
+
+const apurva = Object.create(userPrototype);
+
+console.log(apurva);
+
+apurva.firstName = 'Apurva';
+apurva.lastName = 'DeCruize';
+console.log(apurva );
+
+apurva.degree = 'B.Tech';
+console.log(apurva.greeting());
+apurva.changeDegree('Master of Disaster');
+console.log(apurva.greeting());
