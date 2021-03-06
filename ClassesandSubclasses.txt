@@ -1,0 +1,88 @@
+// ES6 classes and Sub classes
+
+// ES6 classes 
+
+class User{
+    // prop go in to the constructor 
+    constructor(firstName,lastName,started, permission){
+        this.firstName=firstName;
+        this.lastName=lastName;
+        this.started=new Date(started);
+        this.permission = permission;
+    }
+
+    // method 
+
+    getFullName(){
+        return `${this.firstName} ${this.lastName}`;
+    }
+
+    experience(){
+        let today = new Date();
+        const diff = today - this.started.getTime();
+
+        const Exp = new Date(diff);
+        return `${Math.abs(Exp.getUTCFullYear()-1990)} Years ${Math.abs(Exp.getUTCMonth())} Months`;
+    }
+
+    changePermission(newPermission){
+        this.permission = newPermission;
+    }
+    //static method 
+
+    static vacationDaysLeft(x=30,y){
+        return x-y;
+    }
+}
+
+
+const reshul = new User('Reshul','Satan');
+
+// console.log(reshul.experience('1-1-2000'));
+
+const selena = new User('Selena','Gomez','4-30-2017','Professional Singer');
+selena.changePermission('Actress');
+console.log(selena.permission);
+
+const apurva = new User('Apurva','DeCruize','10-10-2007','Onwer');
+console.log(apurva.getFullName());
+console.log(apurva.experience());
+console.log(apurva.permission);
+apurva.changePermission('Owner');
+console.log(apurva.permission);
+
+console.log(User.vacationDaysLeft(8, 2));
+// ES6 subclsses
+
+class Student{
+    constructor(firstName,lastName){
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    getFullName(){
+        return `${this.firstName} ${this.lastName}`;
+    }
+}
+
+class Teacher extends Student{
+    constructor(firstName, lastName, email, access){
+        super(firstName, lastName),
+        this.email = email;
+        this.access = access;
+    }
+    static monthlyParkingPermit(){
+        return 58 +'$';
+    }
+
+}
+const repro = new Student('Tom','Cruize');
+const Leo = new Teacher('Leonardo','Dicaprio','David@gmail.com','Admin');
+console.log(repro.getFullName());
+console.log(Leo.getFullName());
+
+console.log(Teacher.monthlyParkingPermit());
+
+
+
+
