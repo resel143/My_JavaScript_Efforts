@@ -1,0 +1,14 @@
+function UI(){}
+UI.prototype.addStudentToList = function(student){
+    console.log(student);
+    const studentList = document.getElementById('Students_List');
+    const row = document.createElement('tr');
+
+    row.innerHTML = `
+    <td> ${student.firstName} ${student.lastName}</td>
+    <td>${student.DoE}</td>
+    <td> <a href = "#" class = "delete material-icon" >delete_forever </td>
+    `;
+    console.log(row);
+    studentList.appendChild(row);
+}
