@@ -1,0 +1,16 @@
+// regular expressions 
+
+// let regExp = /abc/; // a general regular expression literal
+
+let regExp = new RegExp('abc');
+
+console.log(regExp);
+
+// const string = "";
+
+// const result = regExp.exec(string);
+// console.log(result);
+
+const string = "abc";
+result = regExp.exec(string);
+console.log(result);
