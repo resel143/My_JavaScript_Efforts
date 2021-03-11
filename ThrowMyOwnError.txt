@@ -1,0 +1,16 @@
+
+// let error = new Error("Lwda kuch to sikho Erorororo Object");
+let json_3 = '{"age":3,"name":"Reshul"}';
+
+// alert(error.name); 
+// alert(error.message);
+
+try{
+  let user = JSON.parse(json_3);
+  if(!user.name){
+    throw new SyntaxError('Incomplete data: no name');
+    
+  }alert(user.name);
+}catch(e){
+  alert('kar Gaye kaand');
+}
