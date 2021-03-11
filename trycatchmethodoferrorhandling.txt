@@ -1,0 +1,68 @@
+// Error handling 
+
+// The "try .. catch " syntax 
+
+try {
+  // code 
+
+
+}catch(err){
+  // error handling 
+}
+
+Ex:1;
+// No error 
+document.querySelector('#btn_1').addEventListener('click',()=>{
+  try{
+    alert('Start Run');
+    
+    alert('End Run');
+
+  }catch(err){
+    alert('Catch is ignored!! because there is no error');
+  }
+})
+Ex:2;
+
+document.querySelector('#btn_1').addEventListener('click',()=>{
+  try{
+    alert('Start of try run');
+    reshul; //error
+    alert('End of try run');
+
+  }catch(err){
+    document.querySelector('body').style.backgroundColor='red';
+    alert('error has occured!!');
+  }
+})
+
+//try catch only works for run time error 
+//Must be runtime error
+// try{
+//   Norbert;
+//   [[[[[[[[[[[]]]]]]]]]]];
+// }catch(E){
+//   alert('AAAAAAA');
+// }
+
+// try catch is synchronous
+
+let noVariable;
+try{
+  setTimeout(()=>{
+    noVariable;
+  },1000);
+}catch(e){
+  alert('Kar Gaye na Kaand');
+}
+
+// error object
+
+// Using Try catch 
+
+// throwing our own errors 
+
+
+// re throwing 
+
+// try ... catch ... finally 
