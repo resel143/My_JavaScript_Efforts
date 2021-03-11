@@ -1,0 +1,20 @@
+
+
+try{
+
+}catch(e){
+
+}finally{ //execute no matter what
+  
+}
+
+
+
+try{
+  alert('try');
+  if(confirm('Make an Error?')) BADA();
+}catch(e){
+  alert("catch");
+}finally{
+  alert('finally');
+}
