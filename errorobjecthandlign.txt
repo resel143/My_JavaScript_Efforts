@@ -1,0 +1,16 @@
+// Error objects 
+
+document.querySelector('#btn_3').addEventListener('click',()=>{
+  try{
+    lallalal;
+  }catch(e){
+    // name 
+    alert(e.name);
+    // message 
+    alert(e.message);
+    // stack 
+    alert(e.stack);
+
+    alert(e);
+  }
+})
