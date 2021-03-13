@@ -1,0 +1,39 @@
+// methods of regular expression 
+
+// exec( )  - returns null of match with index as well
+regExp = /expression/i;
+// i = insensitive case 
+
+let string = "kaha hai expression";
+
+// const result = regExp.exec(string);
+
+// console.log(result);
+// console.log(result[0]);
+// console.log(result.index);
+// console.log(result.input);
+
+
+// test() - test match and returns true or False 
+
+const result = regExp.test(string);
+console.log(result);
+
+
+// match () - return array ofall matches 
+
+string = 'hello Regular Expression';
+
+let match = string.match(regExp);
+
+console.log(match);
+
+
+// search() - return the matched index 
+
+ 
+string = 'hello Regular Expression';
+
+match = string.search(regExp);
+
+console.log(match);
