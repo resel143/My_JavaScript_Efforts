@@ -1,0 +1,51 @@
+// regular expression  flags 
+let regExp;
+regExp = /reshul/i;
+// 6 optional Flags 
+// g = Global search
+
+regExp = /R/gi;
+// i = case insensitive search
+// m = multiline Search
+//  s = allows. to match newline characters 
+// u = unicode ; treat patterns as sequences 
+// y = perform a sticky search 
+
+// special characters 
+// ^ = matches the beginning of input
+
+regExp = /^r/i;
+
+
+// $ - matches at the end of input 
+
+regExp = /t$/i;
+
+regExp = /wate$/i; //entire word can be found
+
+// ? = option character 
+
+regExp = /reshul?/i;
+
+// fnally 
+regExp = /^reshul s?wate$/i;
+
+
+// string to match 
+const string = 'Reshul Wate';
+// log results 
+const result = regExp.exec(string);
+console.log(result);
+
+// tester function 
+function regExpTester(regExp, string){
+    if(regExp.test(string)){
+        console.log(`${string} matches ${regExp.source}`);
+    }else{
+        console.log(`${string} No matches! ${regExp.source}`);
+        
+    }
+}
+
+
+regExpTester(regExp,string);
