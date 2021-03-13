@@ -1,0 +1,68 @@
+// ranges quantifiers and groups 
+
+// Ranges[]
+regExp = /resh[ul]/i;
+
+string = "Reshul Selena";
+ 
+// [A-Z]
+regExp = /[A-Z]/;
+string = 'Selena Ji is known for her modesty';
+
+regExp= /[R]eshul Wate/;
+// string = 'reshul';// nomatch 
+string = 'Reshul'; //Yo match 
+
+regExp  = /[^R]eshul [^W]ate/;  //cannot start with R W
+string = 'reshul wate';
+
+// [a-z] lowercase
+
+regExp = /[a-z]/;
+regExp = /^R[a-z]/;
+string = 'Reshul Selena';
+
+// [A-z] A -z upper case nnd lower case
+
+regExp = /[A-z]/;
+string = '!';
+
+//  [0-9] any digit
+regExp = /[0-9]/;
+string = 'Reshu0';
+// quantifiers {}
+
+regExp = /hel{2}o/i ; // must occur atleast {times};
+
+string = 'Hello Reshul';
+
+regExp = /hel{2}o{1,4}/i;
+string = 'Hellooooo Reshul';
+
+// groups  ()
+
+regExp = /([0-9]x){3}$/;
+string = '1x8x9x';
+
+regExp = /([0-9][0-9]x){3}/;
+string = '15x15x15x';
+
+
+
+
+// log results 
+const result = regExp.exec(string);
+console.log(result);
+
+// tester function 
+function regExpTester(regExp, string){
+    if(regExp.test(string)){
+        console.log(`${string} matches ${regExp.source}`);
+    }else{
+        console.log(`${string} No matches! ${regExp.source}`);
+        
+    }
+}
+
+
+regExpTester(regExp,string);
