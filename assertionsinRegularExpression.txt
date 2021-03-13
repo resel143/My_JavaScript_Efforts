@@ -1,0 +1,74 @@
+// shorthand character classes 
+
+//  \d = any digit character
+
+let regExp =   /\w/;
+// string to match 
+let string = '15 march';
+
+// \D = any character NOT a digit 
+string = "52 February";
+
+//  \w An alphanumeric character
+regExp =   /\w+/;
+string = " !";
+
+//  \W non alphnumeric character
+
+regExp= /\W/;
+
+string = "$";
+
+
+//  /x+/ one or more occurences of pattern x
+//  \s any whitespace character [ ,     , new line] etc
+regExp = /\s/;
+string =" ";
+
+// \S every non white space character 
+
+regExp = /\S/;
+string = " s^+";
+
+//  \b word boundary 
+
+regExp = /reshul\b/i;
+string = 'reshulromeo is Selena Hubby Reshul';
+
+// assertion condiontinals 
+
+// x(?=y) Look ahead assertion : match 'x' only if x is followed by y
+
+regExp = /reshul (?=selena)/i;
+string = 'reshul selena';
+
+//x(?!y) negative lookahead assertion only when x is NOT followed by y
+
+regExp = /reshul (?!wate)/i;
+string= 'reshul selena';
+
+// (?<=y)x lookbehind asserion
+regExp = /(?<=selena) reshul/i;
+string = 'reshul selena reshul';
+
+// (?<!y)x negative lookbehind assertion only if x is NOT after y
+regExp = /(?<!selena) reshul/i;
+string = 'selena wate';
+
+
+// log results 
+const result = regExp.exec(string);
+console.log(result);
+
+// tester function 
+function regExpTester(regExp, string){
+    if(regExp.test(string)){
+        console.log(`${string} matches ${regExp.source}`);
+    }else{
+        console.log(`${string} No matches! ${regExp.source}`);
+        
+    }
+}
+
+
+regExpTester(regExp,string);
